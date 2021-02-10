@@ -48,10 +48,10 @@ def _sdss_wcs_to_log_wcs(old_wcs):
     ctype = "WAVE-LOG"
 
     w = WCS(naxis=1)
+    w.wcs.cunit = [cunit]
     w.wcs.crval = [crval]
     w.wcs.cdelt = [cdelt]
     w.wcs.ctype = [ctype]
-    w.wcs.cunit = [cunit]
 
     return w
 
